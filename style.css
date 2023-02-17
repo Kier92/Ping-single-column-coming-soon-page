@@ -34,8 +34,6 @@ a {
     width: calc(var(--Mobile-width) - 2rem);
     margin: 0 auto;
     text-align: center;
-    background-color: hsla(223, 100%, 88%, 0.253);
-    padding-inline: 5rem;
     border-radius: 1rem;
 }
 
