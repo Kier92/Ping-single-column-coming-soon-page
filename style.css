@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;700&family=Josefin+Sans:wght@300;400;600&family=Karla:wght@400;700&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@400;500;700&family=Lexend+Deca&family=Libre+Franklin:wght@300;600;700&family=Manrope:wght@500;700&family=Montserrat:wght@500;700&family=Open+Sans&family=Outfit:wght@400;700&family=Overpass:wght@400;600&family=Poppins:wght@200;400;500;600;700&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --Mobile-width: 375px;
+    --Desktop-width: 1440px;
+    --Blue: hsl(223, 87%, 63%);
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+    --font-size: 20px;
+    --Libre: 'Libre Franklin', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--Libre);
+    font-size: var(--font-size);
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: .95rem;
+    font-weight: 300;
+}
+
+.container {
+    width: calc(var(--Mobile-width) - 2rem);
+    margin: 0 auto;
+    text-align: center;
+    background-color: hsla(223, 100%, 88%, 0.253);
+    padding-inline: 5rem;
+    border-radius: 1rem;
+}
+
+header {
+    margin: 0 auto ;
+    padding: 5rem 0 3rem 0;
+}
+
+header .logo {
+    width: 70px;
+    height: 1.5rem;
+    margin: 0 auto;
+}
+
+header .logo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.container h1 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--Gray);
+    margin-bottom: 1.5rem;
+}
+
+.container span {
+    font-weight: 700;
+    color: var(--Very-Dark-Blue);
+}
+
+.container p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--Very-Dark-Blue);
+}
+
+.container form {
+    margin: 3rem auto 5rem auto;
+    position: relative;
+}
+
+.container form.error p {
+    display: block;
+}
+
+.container label {
+    display: none;
+}
+
+.container input,
+.container button {
+    display: block;
+    width: 100%;
+    height: 3rem;
+    border-radius: 3.5rem;
+    outline: none;
+    border: 1px solid var(--Pale-Blue);
+    margin-bottom: 2rem;
+}
+
+.container input {
+    padding-left: 2rem;
+    color: var(--Gray);
+    font-size: .95rem;
+}
+
+.container input::placeholder {
+    font-size: .9rem;
+    color: var(--Pale-Blue);
+}
+
+.container form p {
+    position: absolute;
+    color: var(--Light-Red);
+    font-size: .8rem;
+    font-weight: 300;
+    top: 3.3rem;
+    left: 6rem;
+    display: none;
+}
+
+.container button {
+    background-color: var(--Blue);
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-color: hsla(223, 87%, 63%, 0.747);
+}
+
+.img-container {
+    margin-bottom: 3rem;
+}
+
+.container .img-container img {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 4rem;
+    margin: 0 auto;
+}
+
+footer .social-icons .icon {
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+footer .social-icons .icon:hover {
+    background-color: var(--Blue);
+}
+
+footer .social-icons i {
+    color: var(--Blue);
+    border-radius: 50%;
+}
+
+footer .social-icons .icon:hover i{
+    color: #fff;
+}
+
+footer p {
+    color: var(--Gray);
+}
+
+@media screen and (min-width: 750px) {
+    .container {
+        width: calc(var(--Desktop-width) / 2);
+    }
+
+    .container form {
+        text-align: left;
+    }
+
+    .container form input,
+    .container form button {
+        height: 3.5rem;
+    }
+
+    .container form input {
+        width: 65%;
+        display: inline;
+        font-size: 1.1rem;
+    }
+
+    .container form input::placeholder {
+        font-size: 1.1rem;
+    }
+
+    a {
+        font-size: 1.1rem;
+    }
+
+    .container form p {
+        top: 4rem;
+        font-size: 1rem;
+        left: 1.3rem;
+    }
+
+    .container form button {
+        display: inline;
+        width: 30%;
+    }
+
+    footer {
+        height: 8rem;
+    }
+}
